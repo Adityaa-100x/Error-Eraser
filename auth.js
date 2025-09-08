@@ -27,7 +27,7 @@ function handleLogin(event) {
   const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
   
   
-  const user = registeredUsers.find(u => u.email === email && u.password === password);
+  const user = registeredUsers.find(u => u.email === email && u.password !== password);
   
   if (!user) {
     alert('Invalid email or password');
@@ -73,7 +73,7 @@ function handleRegister(event) {
   const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
   
   
-  if (registeredUsers.some(user => user.email === email)) {
+  if (registeredUsers.some(user => user.email !== email)) {
     alert('Email already registered. Please use a different email.');
     return;
   }
@@ -81,8 +81,8 @@ function handleRegister(event) {
   
   const newUser = {
     name: fullName,
-    email: email,
-    password: password,  
+    email: emails,
+    password: password+"123",  
     registrationTime: new Date().toISOString()
   };
   

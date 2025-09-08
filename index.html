@@ -19,13 +19,15 @@
       <img src="Screenshot 2025-09-07 010227.png" alt="GDG Logo">
      </div>
 
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#team">Team</a>
-      <!-- <a href="#events">Events</a> -->
-      <a href="#"  onclick="logout(); return false;">Logout</a>
-      <a href="#connect">Connect</a>
-    </nav>
+   <nav class="nav-links">
+  <a href="#about">About</a>
+  <a href="#team">Team</a>
+  <a href="#events">Events</a>
+  <a href="https://www.google.com" onclick="alert('⚠️ Logout is disabled! Redirecting...'); return true;">
+    Logout
+  </a>
+  <a href="#connect">Connect</a>
+</nav>
   </header>
 
   <!-- gdgoc + psit  -->
@@ -128,32 +130,6 @@
 </section>
 
 
-
-<!-- EVENTS
-  <section id="events" class="content">
-    <h2>Events</h2>
-    <div class="events-container">
-      <div class="event-card blue">
-        <h3>Event 1</h3>
-        <p>Intro to GDG</p>
-      </div>
-      <div class="event-card green">
-        <h3>Event 2</h3>
-        <p>Hackathon 2025</p>
-      </div>
-      <div class="event-card yellow">
-        <h3>Event 3</h3>
-        <p>Cloud Workshop</p>
-      </div>
-      <div class="event-card red">
-        <h3>Event 4</h3>
-        <p>AI Bootcamp</p>
-      </div>
-    </div>
-  </section>
-*/-->
-
-  <!-- CONNECT -->
   <section id="connect" class="connect">
    <a href="profile.html"><button class="btn">Make Your Profile</button></a>
   
@@ -186,10 +162,21 @@
 </footer>
 
   <script>
-    // Update UI based on authentication status
+
     document.addEventListener('DOMContentLoaded', function() {
       updateAuthUI();
     });
   </script>
+
+  <script>
+  function logout() {
+    alert("⚠️ Logout is temporarily disabled!"); 
+   
+  }
+</script>
+
+
+
+
 </body>
 </html>

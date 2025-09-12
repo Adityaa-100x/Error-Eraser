@@ -8,10 +8,7 @@
   <script src="auth.js"></script>
 </head>
 <body>
-  <script>
-    
-    requireAuth();
-  </script>
+ 
 
   <!-- NAVBAR -->
   <header class="navbar">
@@ -23,9 +20,7 @@
   <a href="#about">About</a>
   <a href="#team">Team</a>
   <a href="#events">Events</a>
-  <a href="https://www.google.com" onclick="alert('⚠️ Logout is disabled! Redirecting...'); return true;">
-    Logout
-  </a>
+<a href="#"  onclick="logout(); return false;">Logout</a>
   <a href="#connect">Connect</a>
 </nav>
   </header>
@@ -68,11 +63,11 @@
     </div>
 
     <div class="ambassador-card">
-        <img src="pal.jpg" alt="Adison Pal">
+        <img src="pal.jpg" alt="Edison Pal">
       <div class="ambassador-info">
-        <h3>Adison Pal</h3>
+        <h3>Edison Pal</h3>
         <p class="role">Co-Ambassador</p>
-        <p class="desc">Adison Pal acts as the Co Ambassador, supporting outreach efforts with his dynamic energy and
+        <p class="desc">Edison Pal acts as the Co Ambassador, supporting outreach efforts with his dynamic energy and
         strong interpersonal skills. He excels at building community connections and ensuring the club's
         message resonates widely, drawing on his passion for collaboration to amplify the team's impact.
 </p>
@@ -168,13 +163,7 @@
     });
   </script>
 
-  <script>
-  function logout() {
-    alert("⚠️ Logout is temporarily disabled!"); 
-   
-  }
-</script>
-
+  
 
 
 

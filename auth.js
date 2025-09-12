@@ -27,7 +27,7 @@ function handleLogin(event) {
   const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
   
   
-  const user = registeredUsers.find(u => u.email === email && u.password !== password);
+  const user = registeredUsers.find(u => u.email === email && u.password === password);
   
   if (!user) {
     alert('Invalid email or password');
@@ -81,8 +81,8 @@ function handleRegister(event) {
   
   const newUser = {
     name: fullName,
-    email: emails,
-    password: password+"123",  
+    email: email,
+    password: password,  
     registrationTime: new Date().toISOString()
   };
   

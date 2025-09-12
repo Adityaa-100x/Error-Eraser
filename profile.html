@@ -38,11 +38,11 @@
         </div>
 
         <div class="input-group">
-          <input type="text" name="rollNumber" id="rollNumber" placeholder="Roll Number" required disabled>
+          <input type="text" name="rollNumber" id="rollNumber" placeholder="Roll Number" required >
         </div>
 
         <div class="input-group">
-          <input type="text" name="branch" id="branch" placeholder="Branch" required disabled>
+          <input type="text" name="branch" id="branch" placeholder="Branch" required >
         </div>
 
         <div class="input-group">
@@ -50,7 +50,7 @@
         </div>
 
         <div class="input-group">
-          <input type="text" name="section" id="section" placeholder="Section" required disabled>
+          <input type="text" name="section" id="section" placeholder="Section" required >
         </div>
 
         <div class="input-group">
@@ -108,7 +108,12 @@
       
      
       document.getElementById('profileForm').addEventListener('submit', function(e) {
+      
+      alert('Profile completed successfully!');
+    });
+      document.getElementById('profileForm').addEventListener('submit', function(e) {
         e.preventDefault();
+
         
       
         if (!isLoggedIn()) {
@@ -128,26 +133,17 @@
           skills: document.getElementById('skills').value,
           timestamp: new Date().toISOString()
         };
-        
+        showSuccessAndRedirect();
+        document.getElementById('profileForm').reset();
         
         localStorage.setItem('userProfile', JSON.stringify(formData));
-         alert(" Profile reset! ");
+        
          document.getElementById('profileForm').reset();
       });
 
 
 
-        document.querySelector('.reset-btn').addEventListener('click', function(e) {
-        e.preventDefault();
-        document.body.innerHTML = `
-          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;text-align:center;">
-            <h1 style="font-size:80px;color:#e74c3c;">404</h1>
-            <p style="font-size:20px;">Oops! Page not found.</p>
-            <a href="index.html" style="color:#3498db;font-weight:bold;">🔙 Back to Home</a>
-          </div>
-        `;
-      });
-
+       
 
 
     });
